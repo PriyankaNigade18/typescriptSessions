@@ -1,0 +1,82 @@
+1. What is TypeScript? 
+TypeScript is a strongly typed programming language built on top of JavaScript. It 
+was developed by Microsoft. 
+TypeScript adds static typing, interfaces, enums, and other features to JavaScript. - TypeScript is a superset of JavaScript - Every valid JS code is valid TS code. - TypeScript code cannot run directly in browsers or Node.js. It must be compiled 
+(transpiled) to JavaScript 
+first.- File extension: .ts (instead of .js) 
+
+2. TypeScript vs JavaScript 
+- JS is dynamically typed and TS is statically typed -- you declare types for 
+variables and function parameters 
+- JS catches type errors at runtime. TS catches them at compile time, before you 
+even run the code. 
+- TS has interfaces, enums, generics, access modifiers - JS does not have these 
+natively. 
+- TS compiles down to plain JS. The browser or Node.js only runs the compiled JS 
+output 
+
+6. Why TypeScript for Playwright? 
+- Playwright officially recommends TypeScript for writing tests. 
+- You get auto-complete and IntelliSense in VS Code because of type 
+information. 
+- Errors are caught early at compile time, not when the test is running. - Interfaces and types make page objects and test data cleaner and more 
+structured.
+ - All Playwright APIs have TypeScript type definitions built in
+
+
+TypeScript Setup in VS Code (Interview Notes) 
+1. Prerequisites 
+Install Node.js . Verify installation: 
+node -v & npm -v 
+2. Install TypeScript 
+Global install: 
+npm install -g typescript 
+Verify: 
+tsc -v 
+Note: In real projects, prefer local installation instead of global. 
+3. Initialize Project 
+npm init -y 
+Creates Package.json to manage dependencies 
+4. Create TypeScript Configuration 
+tsc --init 
+Creates tsconfig.json 
+Key configurations: Module: commonjs – target: E56 -Out Dir: ./dist 
+“include”:[“*.ts] 
+5. Compile Typescript 
+tsc app.ts --ignoreconfig - compiles all .ts Files Uses tsconfig.json -Outputs Javascript files 
+Run compiled code 
+node dist/app.js 
+6. Run TypeScript Without Compilation 
+Using ts-node 
+npm install -g ts-node typescript 
+ts-node app.ts 
+Using nodemon (auto-restart) 
+npm install -g nodemon  
+nodemon app.ts 
+Using tsx (modern approach) 
+npm install -g tsx 
+tsx app .ts 
+7. Recommended Workflow 
+Development: 
+npx ts-node app.ts  
+or  
+npx tsx app.ts 
+Production/CI: 
+tsc  
+node dist/app.]s 
+8. Important Points (Interview Focus) 
+✓ TypeScript is a superset of JavaScript that adds static typing .  
+✓ TypeScript code must be compiled into Javascript to run in browser or 
+Node js . 
+✓ tsconfig.json controls compilation behavior  
+✓ Avoid using tsc app.ts  use tsc to respect configuration  
+✓ Prefer local dependency installation using devDependencies 
+✓ Tools like ts-node and tsx allow direct execution of TypeScript in 
+development 
+9. Common Issues 
+Permission Error (EACCES): - Caused by global installs - Solution: use local install 
+or fix permissions 
+TS5112 Error: - Happens when using tsc app.ts with tsconfig present - Solution: 
+use tsc 
+ESM Error (Unknown .ts extension): - Caused by module mismatch - Solution: 
+use Common]S or proper ESM configuration
