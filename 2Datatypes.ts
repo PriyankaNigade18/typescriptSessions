@@ -122,6 +122,8 @@ let names:Array<string>=['tom','jerry'];
 
 let user2:[string,number]=['sonika',6757];
 console.log(user2);
+console.log(user2[0]);
+
 
 let person:[string,string,number,boolean]=['tom','peter',30,true];
 console.log(person);
@@ -173,5 +175,7 @@ type userType={name:string,
     }
 
     console.log(upadtedUser);
+    
+    console.log(typeof upadtedUser);
     
 
