@@ -51,3 +51,4 @@ for(let i of choice)
     await page.locator("span.comboTreeItemTitle").filter({hasText:`${i}`}).first().click()
 }
 }
+
