@@ -1,6 +1,6 @@
 import {Locator, test} from "@playwright/test"
 
-test("Test for svg element",async({page})=>{
+test("Test for svg new element",async({page})=>{
 
     await page.goto("https://petdiseasealerts.org/forecast-map#/");
 
