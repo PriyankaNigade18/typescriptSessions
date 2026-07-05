@@ -1,12 +1,15 @@
 
 import {test,expect} from "@playwright/test"
 import {LoginPage} from "../src/pages/LoginPage.js"
+import { InventoryPage } from "../src/pages/InventoryPage.js";
 
  let loginpage:LoginPage;
+ let inventoryPage:InventoryPage;
 
 test.beforeEach(async({page})=>{
      loginpage=new LoginPage(page);
     await loginpage.goToLoginPage();
+    inventoryPage=new InventoryPage(page);
 })
 
 //step1:create test cases
@@ -27,6 +30,7 @@ test("Test for Login ",async({page})=>{
 // await loginPage.goToLoginPage();
 await loginpage.doLogin("standard_user","secret_sauce");
 expect(page).toHaveTitle("Swag Labs");
+expect(await inventoryPage.getInventoryPageTitle()).toEqual("Swag Labs");
 
 })
 
