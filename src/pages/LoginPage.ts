@@ -9,6 +9,7 @@ export class LoginPage extends BasePage
 private readonly username:Locator;
 private readonly password:Locator;
 private readonly loginBtn:Locator;
+private readonly errorMessage:Locator;
 
 
 //constructor
@@ -18,6 +19,7 @@ constructor(page:Page)
     this.username=page.locator("#user-name");
     this.password=page.locator("#password");
     this.loginBtn=page.locator("#login-button");
+    this.errorMessage=page.locator("//h3[@data-test='error']");
 
 
 }
@@ -49,4 +51,14 @@ async doLogin(username:string,password:string):Promise<void>
 }
 
 
+async isInvalidLoginErrorMessageDisplays():Promise<boolean>
+{
+return await this.errorMessage.isVisible();
+}
+
+
+async getInvalidLoginErrorMessage():Promise<string>
+{
+return await this.errorMessage.innerText();
+}
 }
