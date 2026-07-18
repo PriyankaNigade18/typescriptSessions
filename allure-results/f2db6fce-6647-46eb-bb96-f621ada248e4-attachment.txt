@@ -1,0 +1,8 @@
+{
+  id: 8549556,
+  name: 'PriyankaN',
+  email: 'priyankaautomation_1784390945986@open.com',
+  gender: 'female',
+  status: 'active'
+}
+[Function: status]

@@ -1,0 +1,10 @@
+Creating new user
+{
+  id: 8549575,
+  name: 'Priyanka',
+  email: 'priyanka_1784391450562@open.com',
+  gender: 'female',
+  status: 'active'
+}
+201
+8549575
