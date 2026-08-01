@@ -1,0 +1,16 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: api\user4.api.oauth.spec.ts >> Get the token first
+- Location: tests\api\user4.api.oauth.spec.ts:6:1
+
+# Error details
+
+```
+SyntaxError: Unexpected token 'e', "error=bad_"... is not valid JSON
+```

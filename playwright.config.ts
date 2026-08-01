@@ -8,10 +8,10 @@ const result = dotenv.config({
   path: `config/.env.${ENV}`,
 });
 
-console.log("Dotenv Result:", result);
-console.log("BASE_URL:", process.env.BASE_URL);
-console.log("APPUSERNAME:", process.env.APPUSERNAME);
-console.log("APPPASSWORD:", process.env.APPPASSWORD);
+// console.log("Dotenv Result:", result);
+// console.log("BASE_URL:", process.env.BASE_URL);
+// console.log("APPUSERNAME:", process.env.APPUSERNAME);
+// console.log("APPPASSWORD:", process.env.APPPASSWORD);
 
 /**
  * Read environment variables from file.
