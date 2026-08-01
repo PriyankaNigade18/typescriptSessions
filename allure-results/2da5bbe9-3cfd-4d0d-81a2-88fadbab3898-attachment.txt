@@ -1,9 +1,0 @@
-{
-  id: 8549570,
-  name: 'Priyanka',
-  email: 'priyanka_1784391226257@open.com',
-  gender: 'female',
-  status: 'active'
-}
-[Function: status]
-8549570

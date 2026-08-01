@@ -1,9 +1,0 @@
-{
-  id: 8549574,
-  name: 'Priyanka',
-  email: 'priyanka_1784391369069@open.com',
-  gender: 'female',
-  status: 'active'
-}
-201
-8549574

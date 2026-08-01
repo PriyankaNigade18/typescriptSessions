@@ -1,9 +1,0 @@
-Updating user
-{
-  id: 8549579,
-  name: 'PriyankaN',
-  email: 'priyankaautomation_1784391616309@open.com',
-  gender: 'female',
-  status: 'active'
-}
-200

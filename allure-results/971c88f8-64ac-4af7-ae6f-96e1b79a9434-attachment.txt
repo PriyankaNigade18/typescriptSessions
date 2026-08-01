@@ -1,2 +1,0 @@
-{ message: 'Resource not found' }
-404
