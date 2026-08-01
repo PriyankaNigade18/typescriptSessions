@@ -11,7 +11,7 @@ test("Get the token first",async({request})=>{
         client_secret:`se`,
         code:`code`//this will have short lifespan so generate it and use it
     }
- let response=await request.get(`https://github.com/login/oauth/access_token`,{headers:{
+ let response=await request.get(`https:git access_token`,{headers:{
     Accept:"application/json"
  }
     ,params:queryParam})
@@ -23,7 +23,7 @@ test("Get the token first",async({request})=>{
 accessToken=responseBody.access_token;
 
 let auth_Token={Authorization:`Bearer ${accessToken}`}
-let repo=await request.get("https://api.github.com/user/repos",{headers:auth_Token})
+let repo=await request.get("https:githubuserrepo",{headers:auth_Token})
  console.log(await repo.json());
  
 })
