@@ -101,8 +101,7 @@ test("Intercept request",async({page})=>{
         console.log(route.request().method());
 
         console.log(route.request().url());
-
-        
+       
 
         await route.continue();
         
