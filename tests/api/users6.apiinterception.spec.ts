@@ -99,8 +99,10 @@ test("Intercept request",async({page})=>{
     await page.route('**/*',async(route)=>{
 
         console.log(route.request().method());
-        
+
         console.log(route.request().url());
+
+        
 
         await route.continue();
         
