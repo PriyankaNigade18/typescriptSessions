@@ -1,5 +1,6 @@
 
 import {Page} from "@playwright/test"
+import { config } from "../config/config";
 
 
 export class LoginPage{
@@ -18,7 +19,8 @@ export class LoginPage{
 
     async navigate()
     {
-        await this.page.goto("https://www.saucedemo.com/");
+        //await this.page.goto("https://www.saucedemo.com/");
+        await this.page.goto(config.baseurl);
     }
 
     async enterUserName(un:string)

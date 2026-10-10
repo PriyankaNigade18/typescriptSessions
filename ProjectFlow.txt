@@ -1,0 +1,4 @@
+
+
+To run multienviornment 
+$env:ENV="qa";npx cucumber-js

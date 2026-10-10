@@ -10,14 +10,18 @@ dotenv.config({path:path.resolve(process.cwd(),envFileName)});
 
 export const config={
     baseurl:process.env.APPURL || "https://www.saucedemo.com/",
-    headless:process.env.HEADLESS === 'true',
+    headless:process.env.HEADLESS==='true',
     browser:process.env.BROWSER || 'chromium',
 
+    //multiusers we can maintainw with nested object
     users:
     {
         standard:{
             username:process.env.USERNAME || 'standard_user',
             password:process.env.PASSWORD || 'secret_sauce'
         }
+    },
+    timeout:{
+        default:30000
     }
 }
